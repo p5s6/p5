@@ -10,11 +10,12 @@ let punktestand = 0;
 let speed = 3;
 
 var pling; // wir müssen pling als globale variable deklariern
-
+var sash;
 
 function preload() {
   soundFormats('mp3');
-  // pling = loadSound('sound/pling.mp3');
+  pling = loadSound('./sound/pling.mp3');
+  smash = loadSound('./sound/smash.mp3');
 }
 
 
@@ -59,6 +60,9 @@ function draw() {
   // Kollision feststellen, siehe https://github.com/bmoren/p5.collide2D
   let hit = collideRectCircle(quadrat.posX, quadrat.posY - quadrat.seitenlaenge, quadrat.seitenlaenge, quadrat.seitenlaenge, kreis.posX, kreis.posY, 2 * kreis.radius);
   if (hit) {
+    
+    smash.play();
+    
     // Spiel anhalten
     noLoop();
 
@@ -131,10 +135,6 @@ function Kreis() {
   this.radius = 25;
   this.posX = canvasBreite - this.radius;
   this.posY = y_horizont - this.radius;
-
-  this.x = function () {
-    return this.posX;
-  }
 
   this.update = function (time) {
     this.posX = this.posX - speed;
