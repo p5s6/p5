@@ -10,7 +10,10 @@ let punktestand = 0;
 let speed = 3;
 
 var pling; // wir müssen pling als globale variable deklariern
-var sash;
+var smash;
+
+var gameOver = false;
+
 
 function preload() {
   soundFormats('mp3');
@@ -23,8 +26,8 @@ function setup() {
   //  Wir definieren die Malfläche, siehe https://p5js.org/reference/#/p5/createCanvas 
   createCanvas(canvasBreite, canvasHoehe);
 
-  
-  userStartAudio().then(function() {
+
+  userStartAudio().then(function () {
   });
 
 }
@@ -45,6 +48,7 @@ function draw() {
   noStroke();
   rect(0, y_horizont, canvasBreite, canvasHoehe - y_horizont);
 
+
   // quadrat positionieren und zeichnen
   quadrat.update(t);
   quadrat.display();
@@ -57,16 +61,17 @@ function draw() {
   fill(0, 102, 153);
   textSize(20);
   text('Punktestand: ' + punktestand, 50, 50);
-  
+
 
   // Kollision feststellen, siehe https://github.com/bmoren/p5.collide2D
   let hit = collideRectCircle(quadrat.posX, quadrat.posY - quadrat.seitenlaenge, quadrat.seitenlaenge, quadrat.seitenlaenge, kreis.posX, kreis.posY, 2 * kreis.radius);
   if (hit) {
-    
+
     smash.play();
-    
+
     // Spiel anhalten
     noLoop();
+    gameOver = true;
 
     // text anzeigen
     fill(200, 0, 0);
@@ -83,15 +88,23 @@ function keyPressed() {
   quadrat.startJumping();
 }
 
-
+// mouse click und touch!
 function mouseClicked() {
   // Spiel fortsetzen
-  speed = 3;
-  punktestand = 0;
 
-  quadrat = new Quadrat;
-  kreis = new Kreis();
-  loop();
+  if (gameOver) {
+
+    speed = 3;
+    punktestand = 0;
+
+    quadrat = new Quadrat;
+    kreis = new Kreis();
+    loop();
+    gameOver = false;
+  } else {
+    quadrat.startJumping();
+  }
+
 }
 
 // Quadrat Klasse
