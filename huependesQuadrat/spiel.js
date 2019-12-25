@@ -55,7 +55,9 @@ function draw() {
 
   // Punktestand schreiben
   fill(0, 102, 153);
+  textSize(20);
   text('Punktestand: ' + punktestand, 50, 50);
+  
 
   // Kollision feststellen, siehe https://github.com/bmoren/p5.collide2D
   let hit = collideRectCircle(quadrat.posX, quadrat.posY - quadrat.seitenlaenge, quadrat.seitenlaenge, quadrat.seitenlaenge, kreis.posX, kreis.posY, 2 * kreis.radius);
@@ -68,7 +70,11 @@ function draw() {
 
     // text anzeigen
     fill(200, 0, 0);
-    text('GAME OVER!', 50, 100);
+    textSize(60);
+    text('GAME OVER!', 300, 250);
+    textSize(25)
+    fill('black')
+    text('Drücke die linke Maustaste um nochmal zu spielen', 230, 300)
   }
 }
 
