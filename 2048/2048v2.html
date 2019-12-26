@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="2048v2.js"></script>
+    <link rel="stylesheet" href="2048v2.css">
+</head>
+
+<body>
+
+    <!--
+    Wir verwenden ein grid wie in 
+    https://developer.mozilla.org/de/docs/Web/CSS/CSS_Grid_Layout 
+
+-->
+
+    <div id="id_raster" class="raster" >
+
+        <div class="start" onclick="start()">Start</div>
+
+        <div class="links" onclick="nach_links()">links</div>
+        <div class="rechts" onclick="nach_rechts()">rechts</div>
+        <div class="rauf" onclick="nach_oben()">rauf</div>
+        <div class="runter" onclick="nach_unten()">runter</div>
+
+        <div id="id_score" class="score">Score</div>
+
+        <!--
+        <div class="touchZone" ontouchstart="touchStart(event)" ontouchend="touchEnd(event)"></div>
+ -->
+
+        <!--
+            Felder werden von javascript eingefügt
+        -->
+
+
+    </div>
+
+</body>
+
+</html>

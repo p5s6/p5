@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    font: 15px arial, sans-serif;
+}
+
+.raster {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 10px;
+}
+
+.raster>div {
+    text-align: center;
+    padding: 10px;
+}
+
+.start {
+    background-color: gainsboro;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.links {
+    background-color: gainsboro;
+    grid-column: 1;
+    grid-row: 2 / 6;
+}
+
+.rechts {
+    background-color: gainsboro;
+    grid-column: 6;
+    grid-row: 2 / 6;
+}
+
+.rauf {
+    background-color: gainsboro;
+    grid-column: 2/6;
+    grid-row: 1;
+}
+
+.runter {
+    background-color: gainsboro;
+    grid-column: 2/6;
+    grid-row: 6;
+}
+
+.touchZone {
+    grid-column: 2/6;
+    grid-row: 2/6;
+}
+
+
+
+
+
+.wertStyle0 {
+    background-color: rgba(194, 194, 194, 0.5);
+}
+
+.wertStyle2 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle4 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle8 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle16 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle32 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle64 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle128 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle256 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle512 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle1024 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.wertStyle2048 {
+    background-color: rgba(194, 194, 194, 0.5);
+    color: black;
+    font-size: 25px;
+}
+
+.platz11 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.platz12 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.platz13 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.platz14 {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.platz21 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.platz22 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.platz23 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.platz24 {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.platz31 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.platz32 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.platz33 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.platz34 {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.platz41 {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.platz42 {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.platz43 {
+    grid-column: 5;
+    grid-row: 4;
+}
+
+.platz44 {
+    grid-column: 5;
+    grid-row: 5;
+}
