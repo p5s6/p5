@@ -167,15 +167,19 @@ function touchEnd(event) {
 
 
 
-function setzeScore(score) {
-    var element = document.getElementById("id_score");
-    element.innerHTML = String(score);
+function setzeScore(wert) {
+    score = wert;
+    zeigeScore();
 }
 
 function addiereScore(wert) {
     score += wert;
+    zeigeScore();
+}
+
+function zeigeScore() {
     var element = document.getElementById("id_score");
-    element.innerHTML = String(score);
+    element.innerHTML = "Score: " + String(score);
 }
 
 
