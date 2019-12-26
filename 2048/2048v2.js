@@ -94,18 +94,6 @@ function start() {
         feld43 = new Feld(4, 3);
         feld44 = new Feld(4, 4);
 
-        // wir legen touch zone üner FElder
-
-        var touchZone = document.createElement("div");
-        touchZone.classList.add("touchZone");
-        touchZone.addEventListener("touchstart", touchStart);
-        touchZone.addEventListener("touchend", touchEnd);
-
-        var raster = document.getElementById("id_raster");
-        raster.appendChild(touchZone);      
-
-
-
     }
 
     // falls Felder schon angelegt waren, müssen Wert aug Null gesetzt werden
@@ -159,11 +147,6 @@ function touchEnd(event) {
     
     event.preventDefault();
 }
-
-
-
-
-
 
 
 

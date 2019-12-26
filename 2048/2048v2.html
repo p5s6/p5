@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="2048v2.js"></script>
     <link rel="stylesheet" href="2048v2.css">
 </head>
@@ -26,7 +27,7 @@
     </div>
 
 
-    <div id="id_raster" class="raster">
+    <div id="id_raster" class="raster" ontouchstart="touchStart(event)" ontouchend="touchEnd(event)">
 
         <div class="hintergrund"></div>
 
